@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         clang-version: [ 15 ]
-        os: [ linux, macosx, windows ]
+        os: [ linux ]
         include:
           - clang-version: 15
             release: llvm-project-15.0.2.src
