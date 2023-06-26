@@ -28,8 +28,6 @@ jobs:
             bindir: '/build/bin'
             dotexe: ''
             shacmd: 'sha512sum'
-            extra-tar-args: '--exclude=${RELEASE}/clang/test/Driver/Inputs/* --exclude=${RELEASE}/libcxx/test/std/input.output/filesystems/Inputs/static_test_env/* --exclude=${RELEASE}/libclc/amdgcn-mesa3d'
-            extra-tar-args-cfe: '--exclude=cfe-${version}.src/test/Driver/Inputs/*'
     runs-on: ${{ matrix.runner }}
     env:
       COMMON_CMAKE_ARGS: '-DBUILD_SHARED_LIBS=OFF -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra"'
